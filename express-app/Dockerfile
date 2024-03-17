@@ -5,6 +5,5 @@ COPY . .
 RUN npm cache clean --force
 
 
-RUN npm install
-RUN npm install --verbose
+RUN npm install --force
 CMD node index.js
