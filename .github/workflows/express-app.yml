@@ -18,6 +18,12 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 18
+    - run: npm ci
+    - run: npm test 
     - name: Build and push ubuntu
       uses: docker/build-push-action@v5
       with:
