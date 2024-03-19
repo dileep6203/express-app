@@ -48,7 +48,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: express-app
           file: express-app/Dockerfile
           push: true
           tags: devopsdockeruh/express-app:latest
